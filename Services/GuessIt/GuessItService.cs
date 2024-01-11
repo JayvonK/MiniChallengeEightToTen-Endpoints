@@ -26,17 +26,41 @@ public class GuessItService : IGuessItService
 
     public string GuessItHard(string num)
     {
-        if(Int32.TryParse(num, out int number)){
-            
+        if(int.TryParse(num, out int number)){
+            if(number >= 1 && number <= 50){
+                int correctNum = randomNumber.Next(1, 51);
+                if(number > correctNum){
+                    return $"The correct number is lower than your guess: {num}";
+                } else if (number < correctNum){
+                    return $"The correct number is higher than your guess: {num}";
+                } else {
+                    return $"Your Guess: {num} was the correct answer! ({correctNum})";
+                }
+            } else {
+                return "Please input a number that is 1-50";
+            }
+        } else {
+            return "Invalid Input, please input a number that is 1-50";
         }
-        throw new NotImplementedException();
     }
 
     public string GuessItMedium(string num)
     {
-        if(Int32.TryParse(num, out int number)){
-            
+        if(int.TryParse(num, out int number)){
+            if(number >= 1 && number <= 100){
+                int correctNum = randomNumber.Next(1, 101);
+                if(number > correctNum){
+                    return $"The correct number is lower than your guess: {num}";
+                } else if (number < correctNum){
+                    return $"The correct number is higher than your guess: {num}";
+                } else {
+                    return $"Your Guess: {num} was the correct answer! ({correctNum})";
+                }
+            } else {
+                return "Please input a number that is 1-100";
+            }
+        } else {
+            return "Invalid Input, please input a number that is 1-100";
         }
-        throw new NotImplementedException();
     }
 }
