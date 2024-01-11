@@ -1,4 +1,5 @@
 using MiniChallengeEightToTen_Endpoints.Services.EightBall;
+using MiniChallengeEightToTen_Endpoints.Services.GuessIt;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IEightBallService, EightBallService>();
+builder.Services.AddScoped<IGuessItService, GuessItService>();
 
 var app = builder.Build();
 
