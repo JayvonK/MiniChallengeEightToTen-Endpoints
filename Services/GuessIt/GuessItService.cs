@@ -24,7 +24,7 @@ public class GuessItService : IGuessItService
         
     }
 
-    public string GuessItHard(string num)
+    public string GuessItMedium(string num)
     {
         if(int.TryParse(num, out int number)){
             if(number >= 1 && number <= 50){
@@ -44,7 +44,7 @@ public class GuessItService : IGuessItService
         }
     }
 
-    public string GuessItMedium(string num)
+    public string GuessItHard(string num)
     {
         if(int.TryParse(num, out int number)){
             if(number >= 1 && number <= 100){
