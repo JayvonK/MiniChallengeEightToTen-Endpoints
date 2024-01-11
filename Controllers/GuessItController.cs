@@ -20,4 +20,12 @@ public class GuessItController : ControllerBase
         return _guessItService.GuessItEasy(number);
     }
 
+    public string GuessItMedium(string number){
+        return _guessItService.GuessItMedium(number);
+    }
+
+    public string GuessItHard(string number){
+        return _guessItService.GuessItHard(number);
+    }
+
 }
