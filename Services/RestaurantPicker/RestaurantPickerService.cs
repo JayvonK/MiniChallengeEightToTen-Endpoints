@@ -10,9 +10,9 @@ public class RestaurantPickerService : IRestaurantPickerService
     public Random randomNumber = new();
     public string RestaurantPicker(string input)
     {
-        int randomIndex = randomNumber.Next(0, 11);
+        int randomIndex = randomNumber.Next(0, 10);
         string userInput = input.ToLower();
-        if(userInput == "fast food" && userInput == "pizza" && userInput == "seafood"){
+        if(userInput == "fast food" || userInput == "pizza" || userInput == "seafood"){
             if(userInput == "fast food"){
                 return fastFoodArr[randomIndex];
             } else if (userInput == "pizza"){

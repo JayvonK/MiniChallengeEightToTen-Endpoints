@@ -15,7 +15,7 @@ namespace MiniChallengeEightToTen_Endpoints.Controllers
         }
 
         [HttpGet]
-        [Route("Fast Food? Pizza? Seafood?/{category}")]
+        [Route("FastFoodPizzaSeafood/{category}")]
         public string RestaurantPicker(string category){
             return _restaurantPickerService.RestaurantPicker(category);
         }
