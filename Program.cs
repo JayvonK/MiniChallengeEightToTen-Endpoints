@@ -1,5 +1,6 @@
 using MiniChallengeEightToTen_Endpoints.Services.EightBall;
 using MiniChallengeEightToTen_Endpoints.Services.GuessIt;
+using MiniChallengeEightToTen_Endpoints.Services.RestaurantPicker;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IEightBallService, EightBallService>();
 builder.Services.AddScoped<IGuessItService, GuessItService>();
+builder.Services.AddScoped<IRestaurantPickerService, RestaurantPickerService>();
 
 var app = builder.Build();
 
