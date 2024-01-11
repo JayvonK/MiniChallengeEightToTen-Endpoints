@@ -12,5 +12,6 @@ public class EightBallService : IEightBallService
     {
         Random randomGen = new Random();
         int randomIndex = randomGen.Next(0, answers.Length);
+        return answers[randomIndex];
     }
 }
