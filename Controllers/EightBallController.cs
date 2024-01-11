@@ -15,7 +15,7 @@ public class EightBallController : ControllerBase
     }
 
     [HttpGet]
-    [Route("AskMeAnything/{yourQuestion}")]
+    [Route("AskMeYesOrNoQuestion/{yourQuestion}")]
     public string AskMe(string yourQuestion)
     {
         return _eightBallService.AskMe(yourQuestion);
